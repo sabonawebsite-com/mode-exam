@@ -1,23 +1,28 @@
 const questions = [
     { 
-        question: "Which of the following derivations does a top-down parser use?",
-        options: ["Leftmost derivation", "Leftmost derivation in reverse", "Rightmost derivation", "Rightmost derivation in reverse"],
-        answer: "Leftmost derivation"
+        question: "1.Which of the following derivations does a top-down parser use?",
+        options: ["A:Leftmost derivation", "B:Leftmost derivation in reverse", "C:Rightmost derivation", "D:Rightmost derivation in reverse"],
+        answer: "A:Leftmost derivation"
     },
     { 
-        question: "Two main measures for the efficiency of an algorithm are:",
+        question: "2.Two main measures for the efficiency of an algorithm are:",
         options: ["Processor and memory", "Time and space", "Complexity and capacity", "Data and space"],
         answer: "Time and space"
     },
     { 
-        question: "Which of the following is a key property of dynamic programming problems?",
-        options: ["They have overlapping sub-problems", "They can only be solved using recursion", "They do not have optimal substructure", "They are always solved in polynomial time"],
-        answer: "They have overlapping sub-problems"
+        question: "3.Which of the following is not the objectives of peephole optimization? ",
+        options: ["A :Degrade performance", "B:Enhance execution speed", "C:Reduce code size", "D:Reduce memory footprint"],
+        answer: "Degrade performance"
     },
     { 
-        question: "Which page replacement algorithm removes the page that has been in memory the longest?",
-        options: ["Optimal", "FIFO", "LRU", "Second Chance"],
-        answer: "FIFO"
+        question: "4.The extra key inserted at the end of the array is called a _________________ ",
+        options: ["A. End key.", "B. Stop key.", "C. Sentinel.", "D. Transposition.  "],
+        answer: "C. Sentinel."
+    },
+    { 
+        question: "5. ____________is the systematic study of the cost of computation, measured either in time ",
+        options: ["A. Complexity Analysis", "B. Algorithm analysis ", "C. Analysis  ", "D. Asymptotic analysis"],
+        answer: "A. Complexity Analysis"
     }
 ];
 
