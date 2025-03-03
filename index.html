@@ -3,23 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exit Exam model</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vote</title>
 </head>
-<body>
-    <div class="quiz-container">
-        <img src="bru_log.png" alt="">
-        <h1>Exit Exam model</h1>
-        <div id="question-container">
-            <p id="question-text"></p>
-            <div id="options-container" class="idec">
-                
-            </div>
-        </div>
-        <button id="next-btn">Next➡️</button>
-        <p id="score-text"></p>
-    </div>
+<style>
+    .online{
+        width: 50%;
+        background-color: hwb(204 0% 1%);
+        color: white;
+        padding: 20px 20px;
+        font-size: 29px;
+        border-radius: 30px;
+        align-items: center;
+        text-align: center;
+    }
+    .manul{
+        width: 50%;
+        background-color: rgb(245, 20, 50);
+        color: white;
+        padding: 20px 20px;
+        font-size: 29px;
+        border-radius: 30px;
+        align-items: center;
+        text-align: center;
+    }
+.gohead{
+    width: 50%;
+background-color: rgb(131, 8, 245);
+color: white;
+padding: 20px 20px;
+font-size: 20px;
 
-    <script src="script.js"></script>
+border-radius: 30px;
+border: 1px solid rgb(7, 30, 240);
+text-align: center;
+cursor: pointer;
+align-items: center;
+    }
+    .gohead:hover{
+        width: 50%;
+        background-color: rgb(202, 164, 237);
+        color: rgb(16, 15, 15);
+        padding: 25px 20px;
+        font-size: 20px;
+        
+        border-radius: 40px;
+        border: 2px solid rgb(232, 7, 240);
+        text-align: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    .choice{
+        width: 50%;
+        background-color: hsl(303, 100%, 47%);
+        color: white;
+        padding: 20px 20px;
+        font-size: 29px;
+        border-radius: 30px;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 class="choice">❎Vote For</h1>
+    <h2 class="online">🤚Online Registration</h2>
+    <h2 class="manul">🤚Manual Registration</h2>
+    <a href="https://forms.gle/VQR5enS7mcEcdu5B7"><button class="gohead">👉Click Here to Vote</button></a>
 </body>
 </html>
