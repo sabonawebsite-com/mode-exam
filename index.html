@@ -1,69 +1,25 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Vote</title>  
-    <style>  
-        .online {  
-            width: 50%;  
-            background-color: hwb(204 0% 1%);  
-            color: white;  
-            padding: 20px;  
-            font-size: 29px;  
-            border-radius: 30px;  
-            text-align: center;  
-        }  
-        .manul {  
-            width: 50%;  
-            background-color: rgb(245, 20, 50);  
-            color: white;  
-            padding: 20px;  
-            font-size: 29px;  
-            border-radius: 30px;  
-            text-align: center;  
-        }  
-        .gohead {  
-            outline: none;  
-            text-decoration: none;  
-            width: 50%;  
-            background-color: rgb(131, 8, 245);  
-            color: white;  
-            padding: 20px;  
-            font-size: 20px;  
-            border-radius: 30px;  
-            border: 1px solid rgb(7, 30, 240);  
-            text-align: center;  
-            cursor: pointer;  
-        }  
-        .gohead:hover {  
-            background-color: rgb(202, 164, 237);  
-            color: rgb(16, 15, 15);  
-            padding: 25px;  
-            border-radius: 40px;  
-            border: 2px solid rgb(232, 7, 240);  
-        }  
-        .choice {  
-            width: 50%;  
-            background-color: hsl(303, 100%, 47%);  
-            color: white;  
-            padding: 20px;  
-            font-size: 29px;  
-            border-radius: 30px;  
-            text-align: center;  
-        }  
-    </style>  
-</head>  
-<body>  
-    <h1 class="choice">❎ Vote For</h1>  
-    <h2 class="online">🤚 Online Registration</h2>  
-    <h2 class="manul">🤚 Manual Registration</h2>  
-    <button onclick="openForm();" class="gohead" id="button1">Click Here to Vote</button>  
-    <script>  
-        function openForm() {  
-            document.getElementById('button1').innerHTML = "Vote is closed";  
-            document.getElementById('button1').style.backgroundColor = "red";  
-        }  
-    </script>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit Exam model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <img src="bru_log.png" alt="">
+        <h1>Exit Exam model</h1>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="options-container" class="idec">
+                
+            </div>
+        </div>
+        <button id="next-btn">Next➡️</button>
+        <p id="score-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
