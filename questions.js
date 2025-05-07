@@ -1,357 +1,465 @@
+
 const questions = [
-   {
-    question: "Which of the following is NOT a component of a decision tree?",
-    options: ["Internal node", "Branches", "Root node", "Leaf node"],
-    answer: "Root node"
-  },
-  {
-    question: "Which of the following techniques is used to reduce the size of decision trees by removing parts that do not provide power to classify instances?",
-    options: ["Overfitting", "Pruning", "Underfitting", "Splitting"],
-    answer: "Pruning"
-  },
-  {
-    question: "What is the main difference between pre-pruning and post-pruning?",
-    options: [
-      "Pre-pruning is slower than post-pruning.",
-      "Pre-pruning stops tree construction early, while post-pruning prunes a full tree.",
-      "Post-pruning stops tree construction early, while pre-pruning prunes a full tree.",
-      "There is no difference between pre-pruning and post-pruning."
-    ],
-    answer: "Pre-pruning stops tree construction early, while post-pruning prunes a full tree."
-  },
-  {
-    question: "Which of the following is a symptom of overfitting in decision trees?",
-    options: [
-      "Poor accuracy to classify training samples",
-      "Poor accuracy to classify test samples",
-      "Too few branches",
-      "High generalization capability"
-    ],
-    answer: "Poor accuracy to classify test samples"
-  },
-  {
-    question: "Which of the following algorithms is NOT a decision tree algorithm?",
-    options: ["ID3", "C4.5", "C5.0", "KNN"],
-    answer: "KNN"
-  },
-  {
-    question: "What is the underlying principle of the K-Nearest Neighbors algorithm?",
-    options: [
-      "It calculates probabilities based on Bayes' theorem.",
-      "It finds patterns by creating decision rules.",
-      "It assumes similar data points are located near each other.",
-      "It separates data points using a hyperplane."
-    ],
-    answer: "It assumes similar data points are located near each other."
-  },
-  {
-    question: "Which distance measure is commonly used in the K-Nearest Neighbors algorithm?",
-    options: ["Hamming distance", "Euclidean distance", "Manhattan distance", "Cosine distance"],
-    answer: "Euclidean distance"
-  },
-  {
-    question: "In KNN, what happens if k is too small?",
-    options: [
-      "The model becomes less sensitive to noise.",
-      "The model becomes oversensitive to noise points.",
-      "The neighborhood includes points from other classes.",
-      "The model's complexity decreases."
-    ],
-    answer: "The model becomes oversensitive to noise points."
-  },
-  {
-    question: "Which of the following is an advantage of the K-Nearest Neighbors algorithm?",
-    options: [
-      "It handles high dimensional data well.",
-      "It is computationally efficient for large datasets.",
-      "It has very flexible decision boundaries.",
-      "It is robust to irrelevant features."
-    ],
-    answer: "It has very flexible decision boundaries."
-  },
-  {
-    question: "What is a disadvantage of the K-Nearest Neighbors algorithm?",
-    options: [
-      "Simple to explain",
-      "Hard to find a good distance measure",
-      "Flexible decision boundaries",
-      "Not much learning"
-    ],
-    answer: "Hard to find a good distance measure"
-  },
-  {
-    question: "What does Bayes' theorem calculate?",
-    options: [
-      "The probability of an event occurring",
-      "The conditional probability of an event given evidence",
-      "The distance between data points",
-      "The entropy of a dataset"
-    ],
-    answer: "The conditional probability of an event given evidence"
-  },
-  {
-    question: "What is the Naive Bayes classifier known for?",
-    options: ["High complexity", "Simplicity", "Ability to model complex dependencies", "Robustness to outliers"],
-    answer: "Simplicity"
-  },
-  {
-    question: "In Bayesian terms, what is 'posterior probability'?",
-    options: [
-      "The probability of evidence",
-      "The probability of a hypothesis before observing the evidence",
-      "The probability of a hypothesis given the evidence",
-      "The joint probability of hypothesis and evidence"
-    ],
-    answer: "The probability of a hypothesis given the evidence"
-  },
-  {
-    question: "What is a key assumption of Naive Bayes?",
-    options: [
-      "Attributes are dependent on each other.",
-      "Attributes are conditionally independent.",
-      "Data is normally distributed.",
-      "Data has no missing values."
-    ],
-    answer: "Attributes are conditionally independent."
-  },
-  {
-    question: "What do Bayesian belief networks allow?",
-    options: [
-      "Only classification tasks",
-      "Representation of dependencies among attributes",
-      "Simplified computation with independence assumptions",
-      "Only regression tasks"
-    ],
-    answer: "Representation of dependencies among attributes"
-  },
-  {
-    question: "What is the primary purpose of a Support Vector Machine (SVM)?",
-    options: ["Clustering", "Dimensionality reduction", "Classification and regression", "Rule-based learning"],
-    answer: "Classification and regression"
-  },
-  {
-    question: "What does the decision boundary in an SVM represent?",
-    options: [
-      "A line that minimizes the distance between data points",
-      "A hyperplane that separates the classifications of data points",
-      "A curve that fits the data points",
-      "A vector that points to the nearest data point"
-    ],
-    answer: "A hyperplane that separates the classifications of data points"
-  },
-  {
-    question: "What are support vectors?",
-    options: [
-      "Data points far from the decision surface",
-      "Data points closest to the decision surface",
-      "Vectors that support the decision-making process",
-      "Features with the most significant impact"
-    ],
-    answer: "Data points closest to the decision surface"
-  },
-  {
-    question: "What is the Kernel Trick used for in SVM?",
-    options: [
-      "To find the optimal hyperplane in linearly separable data",
-      "To efficiently compute the hyperplane for non-linearly separable data",
-      "To reduce the dimensionality of the data",
-      "To increase the speed of computation"
-    ],
-    answer: "To efficiently compute the hyperplane for non-linearly separable data"
-  },
-  {
-    question: "Which of the following is considered a strength of SVM?",
-    options: [
-      "Easy interpretation",
-      "Robust to a very large number of variables",
-      "Requires direct access to data",
-      "Lack of parameters"
-    ],
-    answer: "Robust to a very large number of variables"
-  },
-  {
-    question: "What is the main idea behind ensemble methods?",
-    options: [
-      "To use a single complex classifier",
-      "To combine multiple classifiers to improve performance",
-      "To reduce the dimensionality of the data",
-      "To simplify the classification process"
-    ],
-    answer: "To combine multiple classifiers to improve performance"
-  },
-  {
-    question: "What is bagging?",
-    options: [
-      "Sequential training of classifiers",
-      "Parallel training of classifiers with different training sets",
-      "Training a single classifier multiple times",
-      "Averaging the predictions of multiple classifiers"
-    ],
-    answer: "Parallel training of classifiers with different training sets"
-  },
-  {
-    question: "How does Random Forest classify a new object?",
-    options: [
-      "By choosing the class with the highest probability",
-      "By averaging the predictions of all trees",
-      "By taking a majority vote of the classifications from all trees",
-      "By selecting the class from the first tree"
-    ],
-    answer: "By taking a majority vote of the classifications from all trees"
-  },
-  {
-    question: "What is boosting?",
-    options: [
-      "Parallel training of classifiers",
-      "Random selection of features",
-      "Sequential training, re-weighting examples",
-      "Averaging the predictions"
-    ],
-    answer: "Sequential training, re-weighting examples"
-  },
-  {
-    question: "In AdaBoost, what does each new classifier focus on?",
-    options: [
-      "The entire dataset",
-      "Data that was correctly classified",
-      "Data that was misclassified",
-      "Random subsets of the data"
-    ],
-    answer: "Data that was misclassified"
-  },
-  {
-    question: "In a confusion matrix, what does 'True Positive' represent?",
-    options: [
-      "Predicted negative values correctly predicted as actual negative",
-      "Predicted positive values correctly predicted as actual positive",
-      "Predicted positive values incorrectly predicted as actual negative",
-      "Predicted negative values incorrectly predicted as actual positive"
-    ],
-    answer: "Predicted positive values correctly predicted as actual positive"
-  },
-  {
-    question: "How is accuracy calculated?",
-    options: [
-      "(TP + TN) / (TP + TN + FP + FN)",
-      "(TP + FP) / (TP + TN + FP + FN)",
-      "(TN + FP) / (TP + TN + FP + FN)",
-      "TP / (TP + FP)"
-    ],
-    answer: "(TP + TN) / (TP + TN + FP + FN)"
-  },
-  {
-    question: "What does 'precision' measure?",
-    options: [
-      "How often the classifier is correct overall",
-      "When it's actually yes, how often does it predict yes?",
-      "When it predicts yes, how often is it correct?",
-      "When it's actually no, how often does it predict no?"
-    ],
-    answer: "When it predicts yes, how often is it correct?"
-  },
-  {
-    question: "What is the misclassification rate also known as?",
-    options: ["Precision", "Recall", "Error Rate", "Specificity"],
-    answer: "Error Rate"
-  },
-  {
-    question: "What is recall also known as?",
-    options: ["Sensitivity", "Specificity", "Precision", "Accuracy"],
-    answer: "Sensitivity"
-  },
-    {
-    question: "Which measure is NOT used by Decision Trees to find the best splitting attribute?",
-    options: ["Information Gain", "Gain Ratio", "Gini Index", "Euclidean Distance"],
-    answer: "Euclidean Distance"
-  },
-  {
-    question: "Which decision tree algorithm can handle numerical target variables but does not support compute rule set?",
-    options: ["ID3", "C4.5", "C5.0", "CART"],
-    answer: "CART"
-  },
-  {
-    question: "In Decision Trees, what does a leaf node represent?",
-    options: ["A variable/feature", "Output/result", "Labels of class", "A branch"],
-    answer: "Labels of class"
-  },
-  {
-    question: "What is a key disadvantage of K-Nearest Neighbors?",
-    options: ["Conceptually complex", "Requires a lot of computation and memory", "Always provides clear decision boundaries", "Handles irrelevant features very well"],
-    answer: "Requires a lot of computation and memory"
-  },
-   {
-    question: "What is the first step in K-Nearest Neighbors?",
-    options: ["Determine the class from the nearest neighbor list", "searches the pattern space for  the k training tuples", "Calculate the majority vote", "Calculate distance"],
-    answer: "searches the pattern space for  the k training tuples"
-  },
-  {
-    question: "What does P(A|B) represent in probability theory?",
-    options: ["The probability of B given A", "The joint probability of A and B", "The conditional probability of A given B", "The probability of A or B"],
-    answer: "The conditional probability of A given B"
-  },
-  {
-    question: "According to the rules of probability theory, what is P(¬A|B)?",
-    options: ["P(A|B)", "1 + P(A|B)", "1 - P(A|B)", "P(B|A)"],
-    answer: "1 - P(A|B)"
-  },
-  {
-    question: "In Bayes classification, what is the goal of a learner?",
-    options: ["To minimize the probability distribution", "To find the least probable hypothesis", "To find the most probable hypothesis", "To maximize the observed data"],
-    answer: "To find the most probable hypothesis"
-  },
-  {
-    question: "What is the primary function of Support Vector Machines?",
-    options: ["To minimize data points", "To maximize the distance between two classes of data points", "To find non-linear relationships", "To reduce dimensionality"],
-    answer: "To maximize the distance between two classes of data points"
-  },
-  {
-    question: "In SVM, what is a 'good attribute'?",
-    options: ["Splits the data with maximum impurity", "Prefers attributes that split the data so that each successor node is as pure as possible", "Has a low degree of order", "Has all classes equally likely"],
-    answer: "Prefers attributes that split the data so that each successor node is as pure as possible"
-  },
-  {
-    question: "Which of the following is NOT a form of ensemble methods?",
-    options: ["Using different algorithms", "Using the same algorithm with different settings", "Assigning different parts of the dataset to different classifiers.", "Using a single decision tree"],
-    answer: "Using a single decision tree"
-  },
-  {
-    question: "What is the simplest approach in ensemble methods?",
-    options: ["Boosting", "Bagging", "Generate multiple classification models, each votes on test instance", "Mixture of experts"],
-    answer: "Generate multiple classification models, each votes on test instance"
-  },
-  {
-    question: "In Bagging, how are predictions combined?",
-    options: ["Weighted average", "Probabilistic methods", "Uniform averaging or voting over class labels", "Mixture of experts"],
-    answer: "Uniform averaging or voting over class labels"
-  },
-  {
-    question: "What is the main characteristic of boosting algorithms?",
-    options: ["They train each classifier independently.", "They combine weak learners into strong learners by creating sequential models.", "They assign equal weights to all classifiers.", "They reduce the size of the training set."],
-    answer: "They combine weak learners into strong learners by creating sequential models."
-  },
-  {
-    question: "Which algorithm is a well-known example of boosting?",
-    options: ["Random Forest", "AdaBoost", "Bagging", "Mixture of Experts"],
-    answer: "AdaBoost"
-  },
-  {
-    question: "What does entropy in information theory measure?",
-    options: ["The amount of noise in the data", "The number of features", "The minimum number of bits needed to encode the classification accuracy of an instance", "The complexity of the model"],
-    answer: "The minimum number of bits needed to encode the classification accuracy of an instance"
-  },
-  {
-    question: "What does Information Gain tell us?",
-    options: ["How much noise is in the data", "How many attributes to use", "How much would be gained by branching on A", "The complexity of the model"],
-    answer: "How much would be gained by branching on A"
-  },
-  {
-    question: "What is a key difference between Bagging and AdaBoost?",
-    options: ["Bagging trains models sequentially, AdaBoost trains in parallel.", "Bagging assigns weights to classifiers, AdaBoost does not.", "In each round, Bagging has a uniform distribution, while AdaBoost adapts a non-uniform distribution.", "Bagging is sensitive to outliers, AdaBoost is robust to outliers."],
-    answer: "In each round, Bagging has a uniform distribution, while AdaBoost adapts a non-uniform distribution."
-  },
-   {
-    question: "What is a characteristic of Gradient Boosted Decision Trees?",
-    options: ["They use very deep trees.", "They build trees in a parallel manner.", "They often use very shallow trees", "They are less sensitive to parameter settings than Random Forests."],
-    answer: "They often use very shallow trees"
-  },
+{
+  question: "What is the primary function of an operating system?",
+  options: ["To run user applications", "To manage computer hardware and software resources", "To provide internet connectivity", "To perform mathematical calculations"],
+  answer: "To manage computer hardware and software resources"
+},
+{
+  question: "Which of the following is NOT a core component of an operating system?",
+  options: ["Kernel", "Shell", "File System", "Web Browser"],
+  answer: "Web Browser"
+},
+{
+  question: "What is the role of the kernel in an operating system?",
+  options: ["Provides the user interface", "Manages low-level hardware operations", "Handles file storage", "Compiles user code"],
+  answer: "Manages low-level hardware operations"
+},
+{
+  question: "What is a process in an operating system?",
+  options: ["A program stored on disk", "A program in execution", "A hardware component", "A system call"],
+  answer: "A program in execution"
+},
+{
+  question: "What is a thread in an operating system?",
+  options: ["A heavy-weight process", "A separate address space", "A lightweight unit of execution within a process", "A virtual memory address"],
+  answer: "A lightweight unit of execution within a process"
+},
+{
+  question: "Which of the following is a process scheduling algorithm?",
+  options: ["Bubble Sort", "Binary Search", "First-Come, First-Served (FCFS)", "Depth-First Search"],
+  answer: "First-Come, First-Served (FCFS)"
+},
+{
+  question: "What is the goal of Shortest Job First (SJF) scheduling?",
+  options: ["Minimize turnaround time", "Maximize CPU utilization", "Ensure fairness among processes", "Minimize response time"],
+  answer: "Minimize turnaround time"
+},
+{
+  question: "What is a disadvantage of the Priority Scheduling algorithm?",
+  options: ["Simple to implement", "Guarantees low waiting times for high-priority processes", "Can lead to starvation of low-priority processes", "Maximizes throughput"],
+  answer: "Can lead to starvation of low-priority processes"
+},
+{
+  question: "What is a time quantum in Round Robin scheduling?",
+  options: ["The minimum execution time for a process", "The maximum priority a process can have", "A fixed amount of CPU time allocated to each process", "The time it takes for a context switch"],
+  answer: "A fixed amount of CPU time allocated to each process"
+},
+{
+  question: "What is context switching?",
+  options: ["Switching between different users", "Switching between different hardware components", "Saving the state of one process and loading the saved state of another process", "Changing the priority of a process"],
+  answer: "Saving the state of one process and loading the saved state of another process"
+},
+{
+  question: "What is deadlock in an operating system?",
+  options: ["A process that runs indefinitely", "A situation where two or more processes are blocked indefinitely, each waiting for a resource held by another", "A memory allocation error", "A file system corruption"],
+  answer: "A situation where two or more processes are blocked indefinitely, each waiting for a resource held by another"
+},
+{
+  question: "Which of the following is a necessary condition for deadlock?",
+  options: ["Preemption", "Mutual Exclusion", "No Hold and Wait", "Circular Wait"],
+  answer: "Mutual Exclusion"
+},
+{
+  question: "Which of the following is a deadlock prevention technique?",
+  options: ["Banker's Algorithm", "Resource Allocation Graph", "Allowing processes to request all necessary resources before execution", "Detecting cycles in the resource allocation graph"],
+  answer: "Allowing processes to request all necessary resources before execution"
+},
+{
+  question: "What is the purpose of memory management in an operating system?",
+  options: ["To manage the CPU", "To manage input/output devices", "To allocate and deallocate memory to processes", "To manage the file system"],
+  answer: "To allocate and deallocate memory to processes"
+},
+{
+  question: "What is the difference between logical address and physical address?",
+  options: ["Logical address is generated by the CPU, physical address is the actual address in memory", "Physical address is generated by the CPU, logical address is the actual address in memory", "They are the same", "Logical address is used for disk storage, physical address for RAM"],
+  answer: "Logical address is generated by the CPU, physical address is the actual address in memory"
+},
+{
+  question: "What is paging in memory management?",
+  options: ["Dividing the physical memory into fixed-size blocks called pages", "Dividing the logical memory into fixed-size blocks called frames", "Dividing both logical and physical memory into variable-size blocks", "Swapping entire processes between memory and disk"],
+  answer: "Dividing the physical memory into fixed-size blocks called frames"
+},
+{
+  question: "What is segmentation in memory management?",
+  options: ["Dividing the physical memory into variable-size blocks called segments", "Dividing the logical memory into variable-size blocks called segments", "Dividing both logical and physical memory into fixed-size blocks", "Allocating contiguous blocks of memory to processes"],
+  answer: "Dividing the logical memory into variable-size blocks called segments"
+},
+{
+  question: "What is virtual memory?",
+  options: ["A technique to make the CPU run faster", "A technique that allows processes to execute even if they are not entirely in memory", "A type of RAM", "Memory that is physically located on the disk"],
+  answer: "A technique that allows processes to execute even if they are not entirely in memory"
+},
+{
+  question: "What is demand paging?",
+  options: ["Loading all pages of a process into memory at the start", "Loading pages into memory only when they are needed", "Writing modified pages back to disk immediately", "Allocating fixed-size partitions to processes"],
+  answer: "Loading pages into memory only when they are needed"
+},
+{
+  question: "Which layer of the OSI model is responsible for defining protocols for user applications?",
+  options: ["Session", "Presentation", "Application", "Transport"],
+  answer: "Application"
+},
+{
+  question: "What is the TCP/IP model?",
+  options: ["A 7-layer network model", "A 4 or 5-layer network model commonly used in the internet", "A hardware specification for network cards", "A set of rules for physical network connections"],
+  answer: "A 4 or 5-layer network model commonly used in the internet"
+},
+{
+  question: "Which layer of the TCP/IP model corresponds to the OSI Physical and Data Link layers?",
+  options: ["Application", "Transport", "Internet", "Network Access"],
+  answer: "Network Access"
+},
+{
+  question: "What is an IP address?",
+  options: ["A physical address of a network interface card", "A logical address that identifies a device on a network", "A media access control address", "A port number for a network application"],
+  answer: "A logical address that identifies a device on a network"
+},
+{
+  question: "What is IPv4?",
+  options: ["The next generation of the Internet Protocol", "The current dominant version of the Internet Protocol using 32-bit addresses", "A protocol used for wireless communication", "A protocol used for network security"],
+  answer: "The current dominant version of the Internet Protocol using 32-bit addresses"
+},
+{
+  question: "What is IPv6?",
+  options: ["An older version of the Internet Protocol", "The next generation of the Internet Protocol using 128-bit addresses", "A protocol used for local area networks", "A protocol used for email transmission"],
+  answer: "The next generation of the Internet Protocol using 128-bit addresses"
+},
+{
+  question: "What is a subnet mask?",
+  options: ["A physical address of a network device", "A 32-bit number that identifies the network and host portions of an IP address", "A password for network access", "A type of network cable"],
+  answer: "A 32-bit number that identifies the network and host portions of an IP address"
+},
+{
+  question: "What is a MAC address?",
+  options: ["A logical address assigned by a network administrator", "A physical address assigned to a network interface card (NIC)", "An IP address", "A port number"],
+  answer: "A physical address assigned to a network interface card (NIC)"
+},
+{
+  question: "What is the purpose of the Address Resolution Protocol (ARP)?",
+  options: ["To resolve IP addresses to MAC addresses", "To resolve MAC addresses to IP addresses", "To assign IP addresses to devices", "To route packets across networks"],
+  answer: "To resolve IP addresses to MAC addresses"
+},
+{
+  question: "What is the purpose of the Domain Name System (DNS)?",
+  options: ["To assign IP addresses to devices", "To translate domain names to IP addresses", "To route email messages", "To secure network connections"],
+  answer: "To translate domain names to IP addresses"
+},
+{
+  question: "What is HTTP?",
+  options: ["A protocol for sending email", "A protocol for transferring files", "The foundation of data communication for the World Wide Web", "A protocol for network security"],
+  answer: "The foundation of data communication for the World Wide Web"
+},
+{
+  question: "What is HTTPS?",
+  options: ["A faster version of HTTP", "HTTP with added security (encryption)", "A protocol for transferring large files", "A protocol for streaming video"],
+  answer: "HTTP with added security (encryption)"
+},
+{
+  question: "What is TCP?",
+  options: ["A connectionless protocol", "A reliable, connection-oriented protocol", "A protocol used for broadcasting messages", "A protocol used for network management"],
+  answer: "A reliable, connection-oriented protocol"
+},
+{
+  question: "What is UDP?",
+  options: ["A reliable, connection-oriented protocol", "A connectionless protocol that prioritizes speed over reliability", "A protocol used for email", "A protocol used for web browsing"],
+  answer: "A connectionless protocol that prioritizes speed over reliability"
+},
+{
+  question: "What is a port number in TCP/IP?",
+  options: ["A physical connection point on a network device", "A logical address used to identify a specific process or service running on a device", "A part of the IP address", "A security key for network access"],
+  answer: "A logical address used to identify a specific process or service running on a device"
+},
+{
+  question: "What is a firewall?",
+  options: ["A physical barrier to network access", "A network security system that controls incoming and outgoing network traffic", "A device that amplifies network signals", "A type of network cable"],
+  answer: "A network security system that controls incoming and outgoing network traffic"
+},
+{
+  question: "What is a router?",
+  options: ["A device that connects computers within a local network", "A device that forwards data packets between networks", "A device that amplifies network signals", "A device that provides wireless internet access"],
+  answer: "A device that forwards data packets between networks"
+},
+{
+  question: "What is a switch?",
+  options: ["A device that forwards data packets between networks based on MAC addresses", "A device that forwards data packets based on IP addresses", "A device that provides wireless internet access", "A device that modulates and demodulates signals"],
+  answer: "A device that forwards data packets between networks based on MAC addresses"
+},
+{
+  question: "What is a hub?",
+  options: ["An intelligent device that forwards data packets", "A device that broadcasts incoming signals to all connected devices", "A device used in wireless networks", "A type of network software"],
+  answer: "A device that broadcasts incoming signals to all connected devices"
+},
+{
+  question: "What is Wi-Fi?",
+  options: ["A wired networking standard", "A popular wireless networking technology based on IEEE 802.11 standards", "A type of network cable", "A protocol for secure communication"],
+  answer: "A popular wireless networking technology based on IEEE 802.11 standards"
+},
+{
+  question: "What is Ethernet?",
+  options: ["A wireless networking standard", "A family of wired computer networking technologies", "A protocol for internet routing", "A type of network security"],
+  answer: "A family of wired computer networking technologies"
+},
+{
+  question: "What is network topology?",
+  options: ["The physical layout of network cables", "The logical arrangement of nodes and connections in a network", "The speed of data transmission", "The protocols used in a network"],
+  answer: "The logical arrangement of nodes and connections in a network"
+},
+{
+  question: "Which of the following is a common network topology?",
+  options: ["Stack", "Queue", "Tree", "Bus"],
+  answer: "Bus"
+},
+{
+  question: "What is network latency?",
+  options: ["The speed of data transmission", "The delay in data transfer over a network", "The number of devices connected to a network", "The physical distance between network nodes"],
+  answer: "The delay in data transfer over a network"
+},
+{
+  question: "What is network bandwidth?",
+  options: ["The delay in data transfer", "The capacity of a network connection to transmit data", "The physical size of the network", "The number of protocols used in a network"],
+  answer: "The capacity of a network connection to transmit data"
+},
+{
+  question: "What is network security?",
+  options: ["Protecting network infrastructure and data from unauthorized access, use, disclosure, disruption, modification, or destruction", "Physically securing network cables", "Optimizing network performance", "Managing network devices"],
+  answer: "Protecting network infrastructure and data from unauthorized access, use, disclosure, disruption, modification, or destruction"
+},
+{
+  question: "Which of the following is a network security protocol?",
+  options: ["HTTP", "FTP", "SSH", "SMTP"],
+  answer: "SSH"
+},
+{
+  question: "What is encryption?",
+  options: ["Converting data into a human-readable format", "Converting data into an unreadable format to protect its confidentiality", "Compressing data to reduce its size", "Transmitting data over a secure channel"],
+  answer: "Converting data into an unreadable format to protect its confidentiality"
+},
+{
+  question: "What is a VPN?",
+  options: ["A physical private network", "A virtual private network that extends a private network across a public network", "A very fast public network", "A type of network cable"],
+  answer: "A virtual private network that extends a private network across a public network"
+},
+{
+  question: "What is network monitoring?",
+  options: ["Physically inspecting network hardware", "Continuously observing a computer network for performance, errors, and security issues", "Setting up new network devices", "Documenting network configurations"],
+  answer: "Continuously observing a computer network for performance, errors, and security issues"
+},
+{
+  question: "What is network troubleshooting?",
+  options: ["Designing new network architectures", "Identifying and resolving problems in a computer network", "Installing network software", "Training users on network usage"],
+  answer: "Identifying and resolving problems in a computer network"
+},
+{
+  question: "What does DBMS stand for?",
+  options: ["Data Base Management System", "Digital Binary Management System", "Distributed Business Management System", "Database Manipulation Software"],
+  answer: "Data Base Management System"
+},
+{
+  question: "What is the primary goal of a DBMS?",
+  options: ["To store and retrieve data efficiently and securely", "To run user applications", "To manage computer hardware", "To provide internet access"],
+  answer: "To store and retrieve data efficiently and securely"
+},
+{
+  question: "Which of the following is NOT a type of database model?",
+  options: ["Relational", "Network", "Hierarchical", "Procedural"],
+  answer: "Procedural"
+},
+{
+  question: "What is a relation in the relational database model?",
+  options: ["A row in a table", "A column in a table", "A table", "A primary key"],
+  answer: "A table"
+},
+{
+  question: "What is a tuple in the relational database model?",
+  options: ["A table", "A column in a table", "A row in a table", "A foreign key"],
+  answer: "A row in a table"
+},
+{
+  question: "What is an attribute in the relational database model?",
+  options: ["A table", "A row in a table", "A column in a table", "A primary key"],
+  answer: "A column in a table"
+},
+{
+  question: "What is a primary key?",
+  options: ["A column that uniquely identifies each row in a table", "A column used to establish relationships between tables", "A non-key attribute", "A constraint that limits the values in a column"],
+  answer: "A column that uniquely identifies each row in a table"
+},
+{
+  question: "What is a foreign key?",
+  options: ["A primary key in another table used to establish a link between the two tables", "A column that uniquely identifies each row in a table", "A non-key attribute", "A constraint that ensures data integrity within a column"],
+  answer: "A primary key in another table used to establish a link between the two tables"
+},
+{
+  question: "What does SQL stand for?",
+  options: ["Structured Query Language", "Simple Question Language", "Standard Query Logic", "Systematic Query Method"],
+  answer: "Structured Query Language"
+},
+{
+  question: "Which SQL command is used to retrieve data from a database?",
+  options: ["INSERT", "UPDATE", "DELETE", "SELECT"],
+  answer: "SELECT"
+},
+{
+  question: "Which SQL command is used to add new records to a table?",
+  options: ["SELECT", "CREATE", "INSERT", "ALTER"],
+  answer: "INSERT"
+},
+{
+  question: "Which SQL command is used to modify existing records in a table?",
+  options: ["DELETE", "UPDATE", "SELECT", "DROP"],
+  answer: "UPDATE"
+},
+{
+  question: "Which SQL command is used to remove records from a table?",
+  options: ["REMOVE", "ERASE", "DELETE", "TRUNCATE"],
+  answer: "DELETE"
+},
+{
+  question: "What is a JOIN operation in SQL used for?",
+  options: ["To filter rows based on a condition", "To combine rows from two or more tables based on a related column", "To sort the result set", "To group rows with the same values"],
+  answer: "To combine rows from two or more tables based on a related column"
+},
+{
+  question: "Which type of JOIN returns only the rows where there is a match in both tables?",
+  options: ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
+  answer: "INNER JOIN"
+},
+{
+  question: "What is a database transaction?",
+  options: ["A single SQL statement", "A sequence of operations treated as a single logical unit of work", "A backup of the database", "A user's login session"],
+  answer: "A sequence of operations treated as a single logical unit of work"
+},
+{
+  question: "Which of the following is a property of a database transaction (ACID)?",
+  options: ["Speed", "Reliability", "Atomicity", "Complexity"],
+  answer: "Atomicity"
+},
+{
+  question: "What does 'Atomicity' in ACID properties refer to?",
+  options: ["All operations in a transaction must be completed or none of them are", "A transaction must maintain the consistency of the database", "Concurrent transactions should not affect each other", "Once a transaction is committed, it cannot be undone"],
+  answer: "All operations in a transaction must be completed or none of them are"
+},
+{
+  question: "What is database normalization?",
+  options: ["The process of organizing data to reduce redundancy and improve data integrity", "The process of backing up the database", "The process of encrypting the database", "The process of optimizing query performance"],
+  answer: "The process of organizing data to reduce redundancy and improve data integrity"
+},
+{
+  question: "What is the goal of First Normal Form (1NF)?",
+  options: ["To eliminate transitive dependencies", "To eliminate repeating groups", "To eliminate partial dependencies", "To ensure that every non-key attribute is fully functionally dependent on the primary key"],
+  answer: "To eliminate repeating groups"
+},
+{
+  question: "What is the goal of Second Normal Form (2NF)?",
+  options: ["To eliminate transitive dependencies", "To eliminate repeating groups", "To eliminate partial dependencies", "To ensure atomicity of data"],
+  answer: "To eliminate partial dependencies"
+},
+{
+  question: "What is the goal of Third Normal Form (3NF)?",
+  options: ["To eliminate transitive dependencies", "To eliminate repeating groups", "To eliminate partial dependencies", "To ensure all attributes are dependent only on the primary key"],
+  answer: "To eliminate transitive dependencies"
+},
+{
+  question: "What is a database index?",
+  options: ["A copy of the entire database", "A data structure that improves the speed of data retrieval operations on a database table", "A constraint on the values in a column", "A way to encrypt data in the database"],
+  answer: "A data structure that improves the speed of data retrieval operations on a database table"
+},
+{
+  question: "Which of the following is a type of database index?",
+  options: ["Primary Index", "Foreign Index", "Secondary Index", "Tertiary Index"],
+  answer: "Secondary Index"
+},
+{
+  question: "What is data integrity?",
+  options: ["The speed at which data can be accessed", "The accuracy and consistency of data", "The size of the database", "The number of users who can access the database"],
+  answer: "The accuracy and consistency of data"
+},
+{
+  question: "Which of the following is a type of data integrity constraint?",
+  options: ["Primary Key Constraint", "Foreign Key Constraint", "NOT NULL Constraint", "All of the above"],
+  answer: "All of the above"
+},
+{
+  question: "What is a database view?",
+  options: ["A physical table stored on disk", "A virtual table based on the result of an SQL statement", "A backup of the database schema", "A set of user permissions"],
+  answer: "A virtual table based on the result of an SQL statement"
+},
+{
+  question: "What is the purpose of a database stored procedure?",
+  options: ["To define the structure of tables", "To automate frequently executed SQL code", "To manage user access rights", "To back up the database"],
+  answer: "To automate frequently executed SQL code"
+},
+{
+  question: "What is data warehousing?",
+  options: ["Storing all types of data in a single database", "A large repository of data collected from various sources for business intelligence", "A small database used for specific applications", "A method of encrypting data at rest"],
+  answer: "A large repository of data collected from various sources for business intelligence"
+},
+{
+  question: "What is data mining?",
+  options: ["Extracting valuable information and patterns from large datasets", "Creating backups of the database", "Managing database security", "Designing the database schema"],
+  answer: "Extracting valuable information and patterns from large datasets"
+},
+{
+  question: "What is NoSQL?",
+  options: ["A type of relational database", "A category of databases that do not adhere to the traditional relational model", "A specific SQL dialect", "A tool for database administration"],
+  answer: "A category of databases that do not adhere to the traditional relational model"
+},
+{
+  question: "Which of the following is a type of NoSQL database?",
+  options: ["MySQL", "PostgreSQL", "MongoDB", "Oracle"],
+  answer: "MongoDB"
+},
+{
+  question: "What is the CAP theorem?",
+  options: ["A set of rules for database normalization", "A theorem that states it's impossible for a distributed data store to simultaneously provide all three of Consistency, Availability, and Partition Tolerance", "A model for relational database design", "A standard for SQL syntax"],
+  answer: "A theorem that states it's impossible for a distributed data store to simultaneously provide all three of Consistency, Availability, and Partition Tolerance"
+},
+{
+  question: "What is database sharding?",
+  options: ["Encrypting the database", "Splitting a large database across multiple machines", "Creating backups of the database", "Optimizing database queries"],
+  answer: "Splitting a large database across multiple machines"
+},
+
+
+{
+  question: "What is a computer network?",
+  options: ["A single computer system", "Two or more computers connected to share resources", "A collection of software programs", "The physical hardware of a computer"],
+  answer: "Two or more computers connected to share resources"
+},
+{
+  question: "What does LAN stand for?",
+  options: ["Local Area Network", "Large Area Network", "Logical Address Node", "Link Access Network"],
+  answer: "Local Area Network"
+},
+{
+  question: "What does WAN stand for?",
+  options: ["Wide Area Network", "Wireless Access Network", "Web Application Network", "Workstation Area Network"],
+  answer: "Wide Area Network"
+},
+{
+  question: "What is the OSI model?",
+  options: ["A hardware standard for network cables", "A conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system", "A programming language for network applications", "A type of network topology"],
+  answer: "A conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system"
+},
+{
+  question: "How many layers are there in the OSI model?",
+  options: ["4", "5", "6", "7"],
+  answer: "7"
+},
+{
+  question: "Which layer of the OSI model is responsible for physical transmission of data?",
+  options: ["Application", "Transport", "Network", "Physical"],
+  answer: "Physical"
+},
+{
+  question: "Which layer of the OSI model is responsible for routing packets across networks?",
+  options: ["Data Link", "Network", "Transport", "Session"],
+  answer: "Network"
+},
+{
+  question: "Which layer of the OSI model provides reliable, ordered, and error-checked delivery of data?",
+  options: ["Physical", "Data Link", "Network", "Transport"],
+  answer: "Transport"
+},
 ]
