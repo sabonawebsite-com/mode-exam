@@ -1,5 +1,307 @@
 
 const questions = [
+
+    {
+      question: "What percentage of consumer spending is estimated to go towards marketing costs?",
+      options: ["25%", "40%", "50%", "60%"],
+      answer: "50%"
+    },
+    {
+      question: "Which type of utility refers to the physical or design of a product or service?",
+      options: ["Place Utility", "Time Utility", "Form Utility", "Possession Utility"],
+      answer: "Form Utility"
+    },
+    {
+      question: "Which marketing philosophy emphasizes that consumers will favor products that are widely available and low in cost?",
+      options: ["Product Concept", "Selling Concept", "Production Concept", "Marketing Concept"],
+      answer: "Production Concept"
+    },
+    {
+      question: "The statement “A good product will sell itself” is most aligned with which marketing philosophy?",
+      options: ["Selling Concept", "Marketing Concept", "Product Concept", "Societal Marketing Concept"],
+      answer: "Product Concept"
+    },
+    {
+      question: "Which concept assumes that consumers will not buy enough of an organization's product unless the organization undertakes aggressive selling and promotion efforts?",
+      options: ["Marketing Concept", "Selling Concept", "Societal Marketing Concept", "Relationship Marketing Concept"],
+      answer: "Selling Concept"
+    },
+    {
+      question: "Which marketing concept focuses on achieving organizational goals by being more effective than competitors in integrating marketing activities toward determining and satisfying the needs and wants of target markets?",
+      options: ["Selling Concept", "Production Concept", "Marketing Concept", "Societal Marketing Concept"],
+      answer: "Marketing Concept"
+    },
+    {
+      question: "Which concept holds that an organization should consider the long-run welfare of consumers and society?",
+      options: ["Marketing Concept", "Selling Concept", "Societal Marketing Concept", "Product Concept"],
+      answer: "Societal Marketing Concept"
+    },
+    {
+      question: "What is the practice of building long-term satisfying relations with key parties to retain their long-term preferences and business?",
+      options: ["Marketing Concept", "Selling Concept", "Relationship Marketing", "Production Concept"],
+      answer: "Relationship Marketing"
+    },
+    {
+      question: "What is the ultimate outcome of relationship marketing?",
+      options: ["Increased sales", "Customer satisfaction", "A marketing network", "Market dominance"],
+      answer: "A marketing network"
+    },
+    {
+      question: "In relationship marketing, what is considered the most critical component?",
+      options: ["Customer satisfaction", "Customer service", "Customer experience", "Product quality"],
+      answer: "Customer experience"
+    },
+    {
+      question: "Which of the following is NOT a component of a Marketing Information System?",
+      options: ["Internal Records", "Marketing Intelligence", "Marketing Research", "Production Planning"],
+      answer: "Production Planning"
+    },
+    {
+      question: "What is the systematic and objective identification, collection, analysis, and dissemination of information for the purpose of assisting management in decision making related to marketing?",
+      options: ["Marketing Intelligence", "Competitive Analysis", "Marketing Research", "Sales Forecasting"],
+      answer: "Marketing Research"
+    },
+     {
+      question: "What are the three functional roles of marketing research?",
+      options: ["Planning, organizing, controlling", "Descriptive, diagnostic, predictive", "Production, finance, marketing", "Sales, promotion, advertising"],
+      answer: "Descriptive, diagnostic, predictive"
+    },
+    {
+      question: "Which of the following is a component of marketing research?",
+      options: ["Product design", "Price elasticity testing", "Production costs", "Employee satisfaction"],
+      answer: "Price elasticity testing"
+    },
+    {
+      question: "What is the systematic process of gathering, analyzing, supplying, and applying information about the external market environment?",
+      options: ["Marketing Research", "Marketing Intelligence", "Competitive Analysis", "Sales Forecasting"],
+      answer: "Marketing Intelligence"
+    },
+    {
+      question: "What is evaluated information used to determine current and future market needs and changes in the business environment?",
+      options: ["Market data", "Sales reports", "Intelligence", "Research findings"],
+      answer: "Intelligence"
+    },
+    {
+      question: "Which method of undertaking marketing intelligence involves a purposeful search for information in some systematic way?",
+      options: ["Unfocused scanning", "Semi-focused scanning", "Informal search", "Formal search"],
+      answer: "Formal search"
+    },
+    {
+      question: "What does competitive analysis help businesses understand?",
+      options: ["Customer demographics", "Competitors’ strengths and weaknesses", "Economic indicators", "Political trends"],
+      answer: "Competitors’ strengths and weaknesses"
+    },
+    {
+      question: "What is the foundation of marketing?",
+      options: ["Sales", "Advertising", "Exchange", "Production"],
+      answer: "Exchange"
+    },
+    {
+      question: "What does marketing consist of, in a broad sense?",
+      options: ["Selling products", "Advertising products", "All activities designed to generate or facilitate an exchange intended to satisfy human needs", "Pricing products"],
+      answer: "All activities designed to generate or facilitate an exchange intended to satisfy human needs"
+    },
+    {
+      question: "What are the controllable variables that the marketing manager can manipulate?",
+      options: ["4 C’s of Marketing", "4 P’s of Marketing", "3 R’s of Marketing", "5 S’s of Marketing"],
+      answer: "4 P’s of Marketing"
+    },
+    {
+      question: "Which of the following is NOT one of the 4 P's of marketing?",
+      options: ["Product", "Price", "Place", "People"],
+      answer: "People"
+    },
+    {
+      question: "What is a marketing strategy?",
+      options: ["A short-term plan to increase sales", "A process to concentrate limited resources on the greatest opportunities to increase sales and achieve a sustainable competitive advantage", "A method to reduce marketing costs", "A way to enter new markets quickly"],
+      answer: "A process to concentrate limited resources on the greatest opportunities to increase sales and achieve a sustainable competitive advantage"
+    },
+    {
+     question: "What is the value placed on what is exchanged?",
+      options: ["Utility", "Satisfaction", "Price", "Cost"],
+      answer: "Price"
+    },
+    {
+      question: "Which pricing strategy involves charging the highest possible price for a product?",
+      options: ["Penetration Pricing", "Cost-plus Pricing", "Price Skimming", "Competition Oriented Pricing"],
+      answer: "Price Skimming"
+    },
+    {
+      question: "Which pricing strategy involves reducing prices compared to competitors’ prices to penetrate the market and increase sales?",
+      options: ["Price Skimming", "Penetration Pricing", "Cost-plus Pricing", "Odd-even Pricing"],
+      answer: "Penetration Pricing"
+    },
+    {
+      question: "What is the communication of the company and its products to customers?",
+      options: ["Pricing", "Distribution", "Promotion", "Product Development"],
+      answer: "Promotion"
+    },
+    {
+      question: "Which of the following is a paid form of non-personal, one-way, mass communication?",
+      options: ["Personal Selling", "Public Relations", "Advertising", "Sales Promotion"],
+      answer: "Advertising"
+    },
+    {
+      question: "What are the ways of delivering products to the market?",
+      options: ["Promotion channels", "Distribution strategies", "Pricing strategies", "Product placements"],
+      answer: "Distribution strategies"
+    },
+    {
+      question: "What type of distribution channel involves intermediaries between the seller and buyer?",
+      options: ["Direct channels", "Indirect channels", "Vertical channels", "Horizontal channels"],
+      answer: "Indirect channels"
+    },
+    {
+      question: "What is the primary purpose of the idea screening stage in product development?",
+      options: ["To generate a large number of ideas", "To lessen the number of ideas to a few valuable ones", "To develop a marketing strategy", "To test the feasibility of an idea"],
+      answer: "To lessen the number of ideas to a few valuable ones"
+    },
+    {
+      question: "Who typically reviews ideas during the idea screening process?",
+      options: ["Customers", "Suppliers", "An idea committee", "Competitors"],
+      answer: "An idea committee"
+    },
+    {
+      question: "What is the outcome of refining attractive ideas in the product development process?",
+      options: ["A business plan", "A product prototype", "Fast able product concepts", "A market analysis"],
+      answer: "Fast able product concepts"
+    },
+    {
+      question: "Concept testing involves gathering reactions from which group?",
+      options: ["Investors", "Employees", "An appropriate group of target consumers/customers", "Government agencies"],
+      answer: "An appropriate group of target consumers/customers"
+    },
+    {
+      question: "What is developed after concept testing in the new product development process?",
+      options: ["A prototype", "A preliminary marketing strategy plan", "A production schedule", "A financial forecast"],
+      answer: "A preliminary marketing strategy plan"
+    },
+    {
+     question: "Which of the following is NOT a part of the preliminary marketing strategy plan?",
+      options: ["Planned price", "Distribution strategy", "Production costs", "Marketing budget of the 1st year"],
+      answer: "Production costs"
+    },
+    {
+      question: "What is the long-run focus of the marketing strategy development stage?",
+      options: ["Short-term sales targets", "Immediate customer feedback", "Long run sales and profit goals, marketing mix strategy", "Operational efficiency"],
+      answer: "Long run sales and profit goals, marketing mix strategy"
+    },
+    {
+      question: "What is the next step after management develops a product concept and marketing strategy?",
+      options: ["Product testing", "Market launch", "Proposal evaluation", "Production"],
+      answer: "Proposal evaluation"
+    },
+    {
+      question: "What is the process through which companies react to market signals and changes in customer demand?",
+      options: ["Market analysis", "Product/service development", "Business planning", "Competitive strategy"],
+      answer: "Product/service development"
+    },
+    {
+      question: "What is identified as a core process in achieving strategic objectives and deterring competition?",
+      options: ["Financial management", "Human resource management", "Product/service development", "Operations management"],
+      answer: "Product/service development"
+    },
+    {
+      question: "Which of the following is NOT one of the four stages of the product/service development process mentioned?",
+      options: ["Idea Generation", "Incubation", "Implementation", "Evaluation"],
+      answer: "Evaluation"
+    },
+    {
+      question: "Which of the following is a fruitful source of ideas for entrepreneurs?",
+      options: ["Competitors' weaknesses", "Government regulations", "Consumers", "Economic downturns"],
+      answer: "Consumers"
+    },
+    {
+      question: "Approximately what percentage of consumer spending goes towards marketing costs?",
+      options: ["25%", "40%", "50%", "75%"],
+      answer: "50%"
+    },
+    {
+      question: "Which type of utility is related to making a product or service accessible to customers?",
+      options: ["Form Utility", "Place Utility", "Time Utility", "Possession Utility"],
+      answer: "Place Utility"
+    },
+    {
+      question: "Informing buyers that a product or service exists relates to which type of utility?",
+      options: ["Form Utility", "Place Utility", "Information Utility", "Time Utility"],
+      answer: "Information Utility"
+    },
+    {
+      question: "Which marketing philosophy focuses on efficient production and wide distribution?",
+      options: ["Product Concept", "Selling Concept", "Production Concept", "Marketing Concept"],
+      answer: "Production Concept"
+    },
+    {
+      question: "A company that focuses on making superior products and improving them over time follows which philosophy?",
+      options: ["Selling Concept", "Marketing Concept", "Product Concept", "Societal Marketing Concept"],
+      answer: "Product Concept"
+    },
+    {
+      question: "The saying 'sell what you make rather than make what the market wants' aligns with which concept?",
+      options: ["Marketing Concept", "Selling Concept", "Societal Marketing Concept", "Relationship Marketing Concept"],
+      answer: "Selling Concept"
+    },
+    {
+      question: "Which marketing concept emphasizes understanding and satisfying the needs and wants of target markets better than competitors?",
+      options: ["Selling Concept", "Production Concept", "Marketing Concept", "Societal Marketing Concept"],
+      answer: "Marketing Concept"
+    },
+    {
+      question: "Considering the long-run welfare of consumers and society is a key aspect of which concept?",
+      options: ["Marketing Concept", "Selling Concept", "Societal Marketing Concept", "Product Concept"],
+      answer: "Societal Marketing Concept"
+    },
+    {
+      question: "Building long-term satisfying relations with customers, suppliers, and distributors is the focus of:",
+      options: ["Transactional marketing", "Mass marketing", "Relationship marketing", "Niche marketing"],
+      answer: "Relationship marketing"
+    },
+    {
+      question: "What is considered a unique company asset built through relationship marketing?",
+      options: ["Brand equity", "Customer database", "Marketing network", "Distribution channel"],
+      answer: "Marketing network"
+    },
+    {
+      question: "In relationship marketing, what is considered the most critical component?",
+      options: ["Customer satisfaction", "Product features", "Customer experience", "Pricing strategy"],
+      answer: "Customer experience"
+    },
+    {
+      question: "Which of the following is NOT one of the 4 Ps of marketing?",
+      options: ["Product", "Price", "Promotion", "Process"],
+      answer: "Process"
+    },
+    {
+      question: "What element of the marketing mix refers to the communication of the company and its products to customers?",
+      options: ["Product", "Price", "Place", "Promotion"],
+      answer: "Promotion"
+    },
+    {
+      question: "What is the value placed on what is exchanged in a marketing transaction?",
+      options: ["Cost", "Price", "Utility", "Satisfaction"],
+      answer: "Price"
+    },
+    {
+      question: "Charging the highest possible price for a product to attract a market seeking quality or status is known as:",
+      options: ["Penetration pricing", "Cost-plus pricing", "Price skimming", "Competitive pricing"],
+      answer: "Price skimming"
+    },
+    {
+      question: "Which pricing strategy involves setting a lower price than competitors to gain market share?",
+      options: ["Price skimming", "Cost-plus pricing", "Penetration pricing", "Value pricing"],
+      answer: "Penetration pricing"
+    },
+    {
+      question: "What refers to the way of delivering products to the market?",
+      options: ["Supply chain management", "Distribution channels", "Logistics", "Inventory management"],
+      answer: "Distribution channels"
+    },
+    {
+      question: "In which type of distribution channel do producers and end-users interact directly?",
+      options: ["Indirect channels", "Multi-channels", "Direct channels", "Hybrid channels"],
+      answer: "Direct channels"
+    },
+  
 {
   question: "What is the primary function of an operating system?",
   options: ["To run user applications", "To manage computer hardware and software resources", "To provide internet connectivity", "To perform mathematical calculations"],
