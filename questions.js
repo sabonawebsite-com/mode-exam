@@ -1,41 +1,5 @@
 
 const questions = [
-    {
-      question: "Which of the following is NOT one of the 4 Ps of marketing?",
-      options: ["Product", "Price", "Promotion", "Process"],
-      answer: "Process"
-    },
-    {
-      question: "What element of the marketing mix refers to the communication of the company and its products to customers?",
-      options: ["Product", "Price", "Place", "Promotion"],
-      answer: "Promotion"
-    },
-    {
-      question: "What is the value placed on what is exchanged in a marketing transaction?",
-      options: ["Cost", "Price", "Utility", "Satisfaction"],
-      answer: "Price"
-    },
-    {
-      question: "Charging the highest possible price for a product to attract a market seeking quality or status is known as:",
-      options: ["Penetration pricing", "Cost-plus pricing", "Price skimming", "Competitive pricing"],
-      answer: "Price skimming"
-    },
-    {
-      question: "Which pricing strategy involves setting a lower price than competitors to gain market share?",
-      options: ["Price skimming", "Cost-plus pricing", "Penetration pricing", "Value pricing"],
-      answer: "Penetration pricing"
-    },
-    {
-      question: "What refers to the way of delivering products to the market?",
-      options: ["Supply chain management", "Distribution channels", "Logistics", "Inventory management"],
-      answer: "Distribution channels"
-    },
-    {
-      question: "In which type of distribution channel do producers and end-users interact directly?",
-      options: ["Indirect channels", "Multi-channels", "Direct channels", "Hybrid channels"],
-      answer: "Direct channels"
-    },
-  
 {
   question: "What is the primary function of an operating system?",
   options: ["To run user applications", "To manage computer hardware and software resources", "To provide internet connectivity", "To perform mathematical calculations"],
